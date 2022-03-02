@@ -1,6 +1,7 @@
 import "./database";
 import express from 'express';
 import taskRoutes from './routes/task.route';
+import authRoutes from './routes/auth.route';
 
 const server = express();
 
@@ -12,6 +13,7 @@ server.get('/', (req, res) => {
 server.use(express.json());
 
 server.use('/api/v1/tasks', taskRoutes);
+server.use('/api/v1/auth', authRoutes);
 
 const port = 5000;
 
