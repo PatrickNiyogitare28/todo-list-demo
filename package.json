@@ -5,13 +5,15 @@
   "main": "index.js",
   "author": "patrickniyogitare28@gmail.com",
   "scripts": {
-    "start:dev": "nodemon --exec babel-node src/index.js",
-    "start": "node dist/index.js",
+    "start:dev": "cross-env NODE_ENV=dev nodemon --exec babel-node src/index.js",
+    "start": "cross-env NODE_ENV=prod node dist/index.js",
+    "test": "cross-env NODE_ENV=test jest --coverage",
     "build": "babel src --out-dir dist"
   },
   "license": "MIT",
   "dependencies": {
     "argon2": "^0.28.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
@@ -22,6 +24,7 @@
     "@babel/core": "^7.17.5",
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
+    "jest": "^27.5.1",
     "nodemon": "^2.0.15"
   }
 }

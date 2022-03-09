@@ -1,6 +1,15 @@
+import 'dotenv/config';
 import mongoose from 'mongoose';
 
-mongoose.connect('mongodb://localhost:27017/todo-app-db', {
+const enviroment = process.env.NODE_ENV;
+// database url according to environment 
+const dev_db_url = process.env.DEVELOPMENT_DB;
+const prod_db_url = process.env.PRODUCTION_DB;
+const test_db_url = process.env.TEST_DB;
+
+const connectionUrl = (enviroment=='dev') ? dev_db_url : (enviroment == 'prod') ? prod_db_url : test_db_url;
+
+mongoose.connect(connectionUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
