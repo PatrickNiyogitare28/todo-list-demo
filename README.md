@@ -33,3 +33,10 @@ $ yarn start:dev
 $ yarn build
 ```
 
+### testing
+
+```sh
+$ yarn test
+  # npm run test
+```
+
