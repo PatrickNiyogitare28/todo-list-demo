@@ -8,6 +8,7 @@ const prod_db_url = process.env.PRODUCTION_DB;
 const test_db_url = process.env.TEST_DB;
 
 const connectionUrl = (enviroment=='dev') ? dev_db_url : (enviroment == 'prod') ? prod_db_url : test_db_url;
+console.log("env: "+enviroment+"  ---- url: "+connectionUrl)
 
 mongoose.connect(connectionUrl, {
     useNewUrlParser: true,
