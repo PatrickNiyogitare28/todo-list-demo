@@ -30,13 +30,13 @@ describe('POST API /api/v1/tasks', () => {
     //should return 400 if task name aready exists
     it('it should fail and return 400 if task exists', (done) => {
         chai.request(app)
-        .post('/api/v1/tasks')
-        .send(task)
-        .end((err, res) => {
-            if (err) return done(err)
-            expect(res.status).to.be.equal(400);
-            return done();
-        })
+            .post('/api/v1/tasks')
+            .send(task)
+            .end((err, res) => {
+                if (err) return done(err)
+                expect(res.status).to.be.equal(400);
+                return done();
+            })
     });
 });
 
