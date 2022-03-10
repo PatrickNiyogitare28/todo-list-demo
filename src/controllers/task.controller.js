@@ -2,6 +2,8 @@ import Task from '../database/model/task.model';
 
 export const saveTask  = async (req, res) => {
     const task = req.body;
+    const existsByName = await _existsByName(task.name);
+    if(existsByName) return res.status(400).json({success: false, message:'Task already exists'});
     const newTask = new Task(task);
     await newTask.save();
     res.status(201).json({success: true, data: newTask});
@@ -34,4 +36,10 @@ export const deleteTaskById = async(req, res) => {
     if(!task) return res.status(404).json({success: false, message: "Task not found"});
     await Task.findByIdAndDelete(id);
     res.status(200).json({success: true, message:"Task deleted", data: task});
+}
+
+const _existsByName = async(name) => {
+    const task = await Task.findOne({name})
+    if(!task) return false;
+    return task;
 }
