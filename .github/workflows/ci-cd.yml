@@ -26,6 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        TEST_DB: ${{ secrets.TEST_DB }}
     - name: Install
       run: npm install -f
     - name: Test
