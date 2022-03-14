@@ -40,3 +40,41 @@ $ yarn test
   # npm run test
 ```
 
+## Docker
+
+Application public image **patrickniyo/todo-list-demo**
+
+The application uses docker to run the application in production containers.
+
+The application needs to be built first before building a docker image.
+
+### Building the docker image
+
+
+```sh
+$ docker build . -t <docker-username>/app-name
+# docker build . -t patrickniyo/todo-list-demo
+```
+
+
+### Running the docker container out our app image
+
+
+```sh
+$ docker run -p <local-port>:<app-port> <image-name/image-id>
+# docker run -p 5000:5000 patrickniyo/todo-list-demo
+```
+
+### Push the docker image to docker hub registry
+
+```sh
+$ docker push <image-name/image-id>
+# docker publish patrickniyo/todo-list-demo
+```
+> Note that you need to be logged in with your docker account. The bellow command allows to login 
+> ```sh
+>  $ docker login
+> ```
+
+## Author
+patrickniyogitare28@gmail.com
