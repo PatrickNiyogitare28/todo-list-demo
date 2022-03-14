@@ -1,5 +1,5 @@
 # todo-list-demo
-The code servers to train ATLP elite team with how to build a rest API with nodejs, express, mongoose &amp; babel
+The code servers to train ATLP elite team with how to build a rest API with nodejs, express, mongoose, babel &amp;  Docker
 
 
 ## Getting started
