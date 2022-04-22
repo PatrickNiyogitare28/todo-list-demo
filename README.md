@@ -1,4 +1,4 @@
-# todo-list-demo
+# Todo-list-demo
 [![Coverage Status](https://coveralls.io/repos/github/PatrickNiyogitare28/todo-list-demo/badge.svg?branch=main)](https://coveralls.io/github/PatrickNiyogitare28/todo-list-demo/?branch=main)
 
 The code servers to train ATLP elite team with how to build a rest API with nodejs, express, mongoose, babel &amp;  Docker
