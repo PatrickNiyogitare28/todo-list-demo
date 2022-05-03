@@ -36,4 +36,4 @@ jobs:
       run: |
        ci_env=`curl -s https://codecov.io/env`
        npm install codecov -g
-       codecov -t 5ffc613a-05ee-43c1-bc5d-1a84903f9cc8
+       codecov -t 23237498-6858-40d1-99f0-cdafa225f69b
