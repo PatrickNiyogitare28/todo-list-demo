@@ -8,7 +8,8 @@
     "start:dev": "cross-env NODE_ENV=dev nodemon --exec babel-node src/index.js",
     "start": "cross-env NODE_ENV=prod node dist/index.js",
     "test": "cross-env NODE_ENV=test nyc mocha --require @babel/register ./src/tests/ --recursive  --exit --timeout 30000",
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "coverage": "nyc --reporter=lcov --reporter=text yarn test"
   },
   "license": "MIT",
   "dependencies": {
